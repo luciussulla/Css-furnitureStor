@@ -89,6 +89,34 @@ body {
 	margin-right: .3rem; 
 }
 
+.search {
+	grid-column: 8/10; 
+	grid-row: 2/3; 
+}
+
+.search-form {
+	display: grid; 
+	grid-template-columns: repeat(10, 10%); 
+}
+
+.search-input {
+	grid-column: 3/-1;
+	grid-row: 1/2; 
+	padding: .3rem .4rem; 
+	border: none; 
+	border-bottom: .1rem solid #12376e; 
+	outline: none; 
+	font-size: 1.3rem; 
+}
+
+.search-btn {
+	grid-column: 10/-1; 
+	grid-row: 1/2; 
+	border: none; 
+	background-color: transparent; 
+	
+}
+
 /* end navbar */ 
 
 
