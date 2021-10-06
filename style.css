@@ -20,7 +20,7 @@ body {
 .container {
 	display: grid; 
 	grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr); 
-	grid-template-rows: repeat(3, min-content) 70vh; 
+	grid-template-rows: repeat(3, min-content) 70vh min-content; 
 	grid-gap: 1.6rem; 
 	margin-top: 1.6rem; 
 }
@@ -179,6 +179,8 @@ body {
 	visibility: hidden; 
 	opacity: 0; 
 	transition: .5s ease;
+	
+	z-index: 20; 
 }
 
 .dropdown-first-list, .dropdown-second-list {
@@ -222,14 +224,9 @@ body {
 /* End navbar */ 
 /* Banner */ 
 
-.slideshow {
-	display: none; 
-}
-
 .banner {
 	grid-column: 2 / 10; 
 	grid-row: 4 / 5; 
-	background-color: #ccc; 
 	position: relative; 
 }
 
@@ -240,6 +237,7 @@ body {
 	transform: translate(-50%, -50%);
 	text-transform: uppercase; 
 	text-align: center; /* centering buttons */ 
+	z-index: 10; 
 }
 
 .banner-heading {
@@ -291,11 +289,158 @@ body {
 	top: 50%; 
 }
 /* end of banner */ 
+/* slideshow */ 
+
+.slideshow {
+	height: 100%; 
+	overflow: hidden; 
+}
+
+.slideshow-wrapper { 
+	display: flex; 
+	width: 400%; 
+	height: 100%; 
+	
+	position: relative; /* for the slideshow animation */ 
+	animation: slideshow 20s infinite; 
+	transition: 
+}
+
+.slide-img {
+	height: 100%; 
+	width: 100%; 
+	object-fit: cover; 
+}
+
+@keyframes slideshow {
+	0% 	{left: 0}
+	10% {left: 0}
+	15% {left: -100%}
+	25% {left: -100%}
+	30% {left: -200%}
+	40% {left: -200%}
+	45% {left: -300%}
+	55% {left: -300%}
+	60% {left: -200%}
+	70% {left: -200%}
+	75% {left: -100%} 
+	85% {left: -100%}
+	90% {left: 0}
+}
 
 
+.slide-btn {
+	position: absolute; 
+	background-color: #bbb; 
+	width: 1.3rem; 
+	height: 1.3rem; 
+	border: .2rem solid #d38800; 
+	border-radius: 50%; 
+	cursor: pointer; 
+	outline: none; 
+	
+	top: 95%; 
+	transform: translateX(-50%); 
+	z-index: 10; 	
+}
 
+.slide-btn-1 {
+	left: 48%; 
+}
 
+.slide-btn-2 {
+	left: 50%; 
+}
 
+.slide-btn-3 {
+	left: 52%; 
+}
+
+.slide-btn-4 {
+	left: 54%; 
+}
+
+/* end slideshow */ 
+
+.slide-btn:focus {
+	background-color: #12376e; 
+}
+
+.slide-btn-1:focus ~ .slideshow-wrapper {
+	animation: none; 
+	left: 0; 
+}
+
+.slide-btn-2:focus ~ .slideshow-wrapper {
+	animation: none; 
+	left: -100%; 
+}
+
+.slide-btn-3:focus ~ .slideshow-wrapper {
+	animation: none; 
+	left: -200%; 
+}
+
+.slide-btn-4:focus ~.slideshow-wrapper {
+	animation: none; 
+	left: -300%; 
+}
+
+/* DAY offer */ 
+
+.day-offer {
+	grid-column: 2/10;
+	grid-row: 5/6; 
+	display: grid; 
+	grid-template-columns: repeat(4, 1fr); 
+	grid-template-rows: repeat(4, min-content);
+	grid-gap: 1.6rem 3.2rem; 
+	justify-items: center; 
+}
+
+.day-offer-img-one {
+	grid-column: 1/3; 
+	grid-row: 1/-1; 
+	width: 100%; 
+}
+
+.day-offer-heading {
+	grid-column: 3/-1; 
+	grid-row: 1/2; 
+	font-size: 6rem; 
+	color: #23476f; 
+}
+
+.day-offer-paragraph {
+	grid-column: 3/-1; 
+	grid-row: 	 2/3; 
+	font-size: 3rem; 
+	color: #34597f; 
+}
+
+.day-offer-btn {
+	grid-column: 3/-1; 
+	grid-row: 3/4; 
+	padding: 1rem; 
+	font-size: 1.4rem; 
+	background: linear-gradient(to top, #00154c, #12376e, #23487f); 
+	color: #fff; 
+	border: none; 
+	border-radius: 5rem; 
+	outline: none; 
+	box-shadow: .2rem .2rem 1rem #777; 
+}
+
+.day-offer-btn:hover {
+	box-shadow: .2rem .2rem 2rem #777; 
+}
+
+.day-offer-img-two {
+	grid-column: 3/-1; 
+	grid-row: 4/-1; 
+	width: 100%; 
+	align-self: end; 
+}
 
 
 
