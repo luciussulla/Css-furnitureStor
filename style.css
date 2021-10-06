@@ -20,7 +20,7 @@ body {
 .container {
 	display: grid; 
 	grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr); 
-	grid-template-rows: repeat(3, min-content); 
+	grid-template-rows: repeat(3, min-content) 70vh; 
 	grid-gap: 1.6rem; 
 	margin-top: 1.6rem; 
 }
@@ -181,6 +181,10 @@ body {
 	transition: .5s ease;
 }
 
+.dropdown-first-list, .dropdown-second-list {
+	list-style: none; 
+}
+
 .second-nav-item:hover .dropdown {
 	visibility: visible; 
 	opacity: 1; 
@@ -215,9 +219,78 @@ body {
 .dropdown-list-link:hover {
 	color: #45878a; 
 }
+/* End navbar */ 
+/* Banner */ 
 
+.slideshow {
+	display: none; 
+}
 
-/* end navbar */ 
+.banner {
+	grid-column: 2 / 10; 
+	grid-row: 4 / 5; 
+	background-color: #ccc; 
+	position: relative; 
+}
+
+.banner-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase; 
+	text-align: center; /* centering buttons */ 
+}
+
+.banner-heading {
+	font-size: 10rem; 
+	color: #12365e; 
+}
+
+.banner-btn {
+	width: 16rem; 
+	height: 6rem; 
+	background: linear-gradient(to top, #00154c, #12376e, #23487f); 
+	color: #fff; 
+	border: .1rem solid #fff; 
+	outline: none; 
+	border-radius: .3rem; 
+	
+	position: relative; 
+	overflow: hidden; 
+}
+
+.banner-content span {
+	text-transform: uppercase;
+}
+
+.banner-btn-text-1 {
+	position: absolute; 
+	top: 50%; 
+	left: 0; 
+	transform: translateY(-50%); 
+	width: 100%; 
+	transition: top .2s; 
+	
+}
+
+.banner-btn-text-2 {
+	position: absolute; 
+	top: 150%; 
+	left: 0; 
+	transform: translateY(-50%); 
+	width: 100%; 
+	transition: top .2s;
+}
+
+.banner-btn:hover .banner-btn-text-1 {
+	top: -150%; 
+}
+
+.banner-btn:hover .banner-btn-text-2 {
+	top: 50%; 
+}
+/* end of banner */ 
 
 
 
