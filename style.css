@@ -20,7 +20,7 @@ body {
 .container {
 	display: grid; 
 	grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr); 
-	grid-template-rows: repeat(3, min-content) 70vh min-content; 
+	grid-template-rows: repeat(3, min-content) 70vh min-content repeat(5, min-content); 
 	grid-gap: 1.6rem; 
 	margin-top: 1.6rem; 
 }
@@ -442,10 +442,66 @@ body {
 	align-self: end; 
 }
 
+/* bestselling furniture */ 
 
+.bestselling-furniture {
+	grid-column: 2/10; 
+	grid-row: 6/7; 
+}
 
+.bestselling-furniture-header {
+	font-size: 4.5rem; 
+	padding: 3rem 0; 
+	color: #23576e; 
+	text-align: center; 
+}
 
+.bestselling-furniture-cards {
+	display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); 
+	grid-gap: 3rem; 
+}
 
+.bestselling-furniture-card {
+	background-color: #efefef; 
+	box-shadow: 0 1.6rem 6rem rgba(0,0,0,0.3); 
+}
 
+.bestselling-furniture-img {
+	border-radius: .3rem .3rem 0 0; 
+	width: 100%; 
+}
 
+.bestselling-furniture-heading {
+	width: 80%;
+	margin: auto; 
+	background-color: #fffddd;
+	text-align:center; 
+	font-size: 2.4rem; 
+	color: #34586e; 
+	padding: .5rem 0; 
+	border-radius: .2rem; 
+	transform: translateY(-50%); 	
+}
+
+.bestselling-furniture-paragraph {
+	font-size: 1.9rem; 
+	color: #3459af;
+	text-align: center; 
+	margin-bottom: 1.6rem; 
+}
+
+.bestselling-furniture-btn {
+	width: 100%; 
+	background-color:  #12365e;
+	font-size: 1.9rem; 
+	padding: 1.6rem 0; 
+	color: #fff; 
+	border: none; 
+	border-radius: 0 0 .3rem .3rem; 
+}
+
+.bestselling-furniture-btn:hover {
+	background-color: #2387a7; 
+}
 
