@@ -10,6 +10,42 @@
     <title>Furniture Store</title>
 </head>
 <body> 
+	<!-- modal -->
+	<input type="checkbox" id='show-hide-form'>
+	
+	<div class="forms-wrapper">
+		
+		<label for="show-hide-form" class="x-btn" >&#10005;</label>
+		<input type="checkbox" id="show-form">
+		
+		<div class="show-btns-wrapper">
+			<label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
+			<label for="show-form" class="show-form-btn show-login-form">Login</label>
+		</div>
+		
+		<form class="signup-form">
+			<h3 class="form-heading">Sign Up</h3>
+			<div class="fullname-inputs-wrapper">
+				<input type="text" placeholder="First Name">
+				<input type="text" placeholder="Last Name">
+			</div>
+			<input type="text" class="form-input" placeholder="Username">
+			<input type="email" class="form-input" placeholder="Email Address">
+			<input type="password" class="form-input" placeholder="Password">
+			<input type="submit" class="form-btn" value="Sign up">
+		</form>	
+		
+		<form class="login-form">
+			<h3 class="form-heading">Log in</h3>
+			<input type="email" class="form-input" placeholder="Email Address">
+			<input type="password" class="form-input" placeholder="Password">
+			<input type="submit" class="form-btn"  value="Log in">
+		</form>	
+		
+	</div><!-- end form wrapper --> 
+	
+	<!-- end of modal -->
+	
 	<div class="container">
 		<ul class="social-icons">
 			<li class="social-icon-item">
@@ -40,7 +76,7 @@
 				<nav class="first-nav">
 					<ul class="first-nav-list">
 						<li class="first-nav-item">
-							<a href="#" class="first-nav-link"><i class="fas fa-sign-in-alt"></i>Sign up / Log in</a>
+							<a href="#" class="first-nav-link"><label for="show-hide-form"><i class="fas fa-sign-in-alt"></i>Sign up / Log in</label></a>
 						</li>
 
 						<li class="first-nav-item">
@@ -234,9 +270,40 @@
 					<button class="bestselling-furniture-btn"> Buy Now</button>
 				</div>
 				
-			</div><!-- end bestselling furniture cards --> 
-			
-		</section>
+			</div>
+		</section><!-- end bestselling furniture cards --> 		
+		<!-- gallery --> 
+		
+			<section class="gallery">
+				<img src="images/gallery-img-1.jpeg" class="gallery-img gallery-img-1">
+				<img src="images/gallery-img-2.jpeg" class="gallery-img gallery-img-2">
+				<img src="images/gallery-img-3.jpeg" class="gallery-img gallery-img-3">
+				<img src="images/gallery-img-4.jpeg" class="gallery-img gallery-img-4">
+				<img src="images/gallery-img-5.jpeg" class="gallery-img gallery-img-5">
+				<img src="images/gallery-img-6.jpeg" class="gallery-img gallery-img-6">
+				<img src="images/gallery-img-7.jpeg" class="gallery-img gallery-img-7">
+				<img src="images/gallery-img-8.jpeg" class="gallery-img gallery-img-8">
+				<img src="images/gallery-img-9.jpeg" class="gallery-img gallery-img-9">
+				<img src="images/gallery-img-10.jpeg" class="gallery-img gallery-img-10">
+				<img src="images/gallery-img-11.jpeg" class="gallery-img gallery-img-11">
+				<img src="images/gallery-img-12.jpeg" class="gallery-img gallery-img-12">
+			</section>
+			<!-- end of gallery -->
+		
+			<section class="contact">
+				<h1 class="contact-heading">
+					Contact
+				</h1>
+				<form class="contact-form">
+					<input type="text" class="contact-input" placeholder="Enter email">
+					
+					<input type="submit" class="contact-btn" placeholder="Sign up">
+				</form>
+			</section>
+		
+			<footer class="footer">
+				<p>&copy; LaserCatCodes. All rights reserved</p>
+			</footer>
 	</div><!-- container --> 
 	
 </body>

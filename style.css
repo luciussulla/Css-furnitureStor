@@ -386,6 +386,8 @@ body {
 	left: -300%; 
 }
 
+
+
 /* DAY offer */ 
 
 .day-offer {
@@ -441,6 +443,7 @@ body {
 	width: 100%; 
 	align-self: end; 
 }
+
 
 /* bestselling furniture */ 
 
@@ -505,3 +508,293 @@ body {
 	background-color: #2387a7; 
 }
 
+.gallery {
+	grid-column: 1/-1; 
+	grid-row: 7/8; 
+	display: grid; 
+	grid-template-columns: repeat(8, minmax(1rem, 1fr)); 
+	grid-template-rows: repeat(4, 10vw); 
+	grid-gap: 1.6rem; 
+	margin-top: 6.4rem;
+	background-color: #23487f; 
+	padding: 1.6rem 0; 
+}
+
+.gallery-img {
+	width: 100%; 
+	height: 100%; 
+	object-fit: cover;
+	opacity: .5; 
+	transition: opacity .5s; 
+}
+
+.gallery-img:hover {
+	opacity: 1; 
+}
+
+.gallery-img-1 {
+	grid-column: 1 / 3; 
+	grid-row: 1 / 2; 
+}
+
+.gallery-img-2 {
+	grid-column: 3 / 6; 
+	grid-row: 1 / 3; 
+}
+
+.gallery-img-3 {
+	grid-column: 6 / 7; 
+	grid-row: 1 / 2; 
+}
+
+.gallery-img-4 {
+	grid-column: 7 / 9; 
+	grid-row: 1 / 3; 
+}
+
+.gallery-img-5 {
+	grid-column: 1 / 3; 
+	grid-row: 2 / 4; 
+}
+
+.gallery-img-6 {
+	grid-column: 3 / 5; 
+	grid-row: 3 / 4; 
+}
+
+.gallery-img-7 {
+	grid-column: 6 / 7; 
+	grid-row: 2 / 4; 
+}
+
+.gallery-img-8 {
+	grid-column: 5 / 6; 
+	grid-row: 3 / 5; 
+}
+
+.gallery-img-9 {
+	grid-column: 1 / 3; 
+	grid-row: 4 / 5; 
+}
+
+.gallery-img-10 {
+	grid-column: 3/ 5; 
+	grid-row: 4 / 5; 
+}
+
+.gallery-img-11 {
+	grid-column: 6 / 7; 
+	grid-row: 4 / 5; 
+}
+
+.gallery-img-12 {
+	grid-column: 7 / 9; 
+	grid-row: 3 / 5; 
+}
+/* Contact */
+
+.contact {
+	grid-column: 1 / -1; 
+	grid-row: 8/9; 
+	display: grid; 
+	grid-gap: 3rem; 
+	grid-template-columns: repeat(2, 1fr); 
+	background-color: #12376e; 
+	padding: 2rem 0; 
+}
+
+.contact-heading {
+	justify-self: end; 
+	color: #fff; 
+	font-size: 2rem; 
+}
+
+.contact-form {
+	display: flex; 
+}
+
+.contact-form input {
+	outline: none; 
+	padding: .4rem 1rem; 
+	border: 1px solid #fff; 
+}
+
+.contact-input {
+	border-radius: 5rem 0 0 5rem; 
+	border-right: none; 
+}
+
+.contact-btn {
+	background-color: #24678e; 
+	color: #fff; 
+	border-radius: 0 5rem 5rem 0; 
+	border-left: none; 
+}
+
+.contact-btn:hover {
+	background-color: #12374e; 
+}
+
+/* Footer */ 
+
+.footer {
+	grid-column: 2/10; 
+	grid-row: 9/10; 
+	color: #34598f; 
+	padding: 2rem 0 3rem 0; 
+	font-size: 1.6rem; 
+	text-align: center; 	
+}
+
+/* Form */ 
+
+.forms-wrapper {
+	position: absolute; 
+	top: 20%; 
+	left: 50%; 
+	transform: translateX(-50%); 
+	padding: 2rem; 
+	border-radius: .2rem; 
+	border: .1rem solid #34598e#; 
+	background-color: #eee; 
+	z-index: 30; 
+}
+
+.show-btns-wrapper {
+	padding: 1rem; 
+	display: flex; 
+}
+
+.show-form-btn {
+	flex: 0 1 50%; 
+	background-color: #12376e; 
+	color: #fff; 
+	font-size: 1.5rem;
+	text-align: center; 
+	border: .1rem solid #eee; 
+	padding: 1rem; 
+	text-transform: uppercase; 
+	letter-spacing: .1rem; 
+	cursor: pointer; 
+}
+
+.form-heading {
+	font-size: 2rem; 
+	padding: 1rem 0 0 .2rem; 
+	color: #12376e; 
+	text-transform: uppercase; 
+}
+
+.forms-wrapper form {
+	width: 50rem; 
+	padding: 1rem; 
+/*	border: 1px solid blue; */
+}
+
+.forms-wrapper form input:not(.form-btn) {
+	color: #777; 
+	background-color: #fff; 
+	padding: 1.3rem;
+	margin: .3rem 0; 
+	border: .2rem solid #eee; 
+	box-sizing: border-box;
+	outline: none; 
+}
+/* full name inputs */ 
+
+.fullname-inputs-wrapper {
+	display: flex; 
+}
+
+.fullname-inputs-wrapper input {
+	width: 50%; 
+}
+
+.form-input {
+	width: 100%; 
+}
+
+/* btns */ 
+
+.form-btn {
+	width: 35%; 
+	background-color: #d38800; 
+	padding: 1rem; 
+	border: none; 
+	color: #fff; 
+	margin-top: .5rem; 
+}
+
+.x-btn {
+	cursor: pointer; 
+	color: #00137e; 
+	font-style: bolder; 
+	font-size: 2rem; 
+	position: absolute; 
+	bottom: 1rem; 
+	right: 1rem; 
+
+}
+/* clicking on labels / switching of forms */ 
+
+.login-form {
+	display: none; 
+}
+
+.show-signup-form  {
+	color: #888; 
+	background-color: #34598e; 
+	pointer-events: none; 
+}
+
+#show-form:checked ~ .show-btns-wrapper .show-login-form {
+	color: #888; 
+	background-color: #34598e; 
+	pointer-events: none; 
+}
+
+#show-form:checked ~ .show-btns-wrapper .show-signup-form {
+	background-color: #12376e; 
+	color: #fff;
+	pointer-events: auto; 
+}
+
+#show-form:checked ~ .signup-form {
+	display: none; 
+}
+
+#show-form:checked ~ .login-form {
+	display: block; 
+}
+
+/* hide the input checkboxes */ 
+#show-form, #show-hide-form {
+	display: none; 
+}
+
+/* switch off / on the modal */
+
+.first-nav-link label{
+	cursor: pointer; 
+}
+
+.forms-wrapper {
+	display: none; 
+}
+
+#show-hide-form:checked ~ .forms-wrapper {
+	display:block; 
+	animation: anim .5s; 
+}
+
+#show-hide-form:checked ~ .container {
+	opacity: 0.6; 
+	pointer-events: none; 
+}
+
+@keyframes anim {
+	0%  {left: 40%}
+	50% {left: 60%}
+	75% {left: 45%}
+	100%{left: 50%}
+}
